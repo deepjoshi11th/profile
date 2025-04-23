@@ -1,9 +1,10 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { renderEra } from './utils/animateEraChange.js';
+import { createTimeSlider } from './components/TimeSlider.js';
 
-console.log("Welcome to the future of the web.");
+document.body.appendChild(createTimeSlider());
 
-setupCounter(document.querySelector('#counter'))
+renderEra("2025"); // default view
 
+window.addEventListener('era-change', (e) => {
+  renderEra(e.detail.year);
+});
