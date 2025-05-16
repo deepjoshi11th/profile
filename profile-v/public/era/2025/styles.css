@@ -73,3 +73,126 @@ body, html {
     font-size: 1.5rem;
   }
 }
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about {
+  background: rgba(0, 0, 0);
+  backdrop-filter: blur(10px);
+  padding: 4rem 1.25rem;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 255, 225, 0.1);
+}
+
+.about h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #00ffe1;
+}
+
+.acid {
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.logic {
+  background: #4f46e5; /* Indigo */
+}
+.creativity {
+  background: #f59e0b; /* Amber */
+}
+.persistence {
+  background: #ef4444; /* Red */
+}
+.collaboration {
+  background: #10b981; /* Green */
+}
+
+.dna-strand-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+
+.dna-strand {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.left-acid,
+.right-acid {
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 12px;
+  color: #fff;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 45%;
+}
+
+.reveal-section.visible .left-acid {
+  left: 0;
+  animation: slideInLeft 5s ease-in, reduceWidth 1s ease-in-out 5s forwards;
+  transform-origin: bottom left;
+}
+
+.reveal-section.visible .right-acid {
+  right: 0;
+  animation: slideInRight 5s ease-in, reduceWidth 1s ease-in-out 5s forwards;
+  transform-origin: bottom right;
+}
+
+@keyframes slideInLeft {
+  from { rotate: -90deg; opacity: 0; }
+  to { rotate: 0; opacity: 1; }
+}
+@keyframes slideInRight {
+  from { rotate: 90deg; opacity: 0; }
+  to { rotate: 0; opacity: 1; }
+}
+@keyframes reduceWidth {
+  from { width: 45%; }
+  to { width: 5%; }
+}
+
+
+.result-text {
+  color: #f0f0f0;
+  font-size: 1rem;
+  background: #123;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  transition-delay: 6s;
+}
+
+.reveal-section.visible .result-text {
+  opacity: 1;
+}
