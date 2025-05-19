@@ -1,5 +1,6 @@
 body, html {
   overflow-x: hidden;
+  background: #000;
 }
 
 .hero {
@@ -195,4 +196,93 @@ body, html {
 
 .reveal-section.visible .result-text {
   opacity: 1;
+}
+
+.mistakes {
+  font-family: 'Segoe UI', sans-serif;
+  background: rgba(0, 0, 0);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 255, 225, 0.1);
+}
+
+.mistake-card {
+  background: #111;
+  border-left: 4px solid #00ffe1;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mistake-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #00ffe1;
+  margin-bottom: 0.25rem;
+}
+
+.mistake-teaser {
+  font-style: italic;
+  color: #999;
+  margin-bottom: 0.75rem;
+}
+
+.toggle-btn {
+  background: transparent;
+  border: 1px solid #00ffe1;
+  color: #00ffe1;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(0, 255, 225, 0.1);
+}
+
+.mistake-summary,
+.mistake-full {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.commit-block {
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 255, 225, 0.1);
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+  color: #dcdcdc;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Optional: animate the height/opacity smoothly */
+.mistake-summary,
+.mistake-full {
+  transition: all 0.4s ease;
+}
+
+.mistakes h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #00ffe1;
 }
