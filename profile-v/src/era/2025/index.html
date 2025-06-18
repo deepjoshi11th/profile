@@ -1,0 +1,286 @@
+<!-- src/eras/2025/index.html -->
+<link rel="stylesheet" href="./styles.css" />
+<div class="era">
+    <section class="hero reveal-section">
+        <h1 class="headline">Hi, I'm Deep.</h1>
+        <p class="subtitle" id="subtitle"></p>
+    </section>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I’m Deep. Here are my Amino Acids.</p>
+        <div class="dna-key reveal-section">
+          <div class="acid logic">🧠 Logic</div>
+          <div class="acid creativity">🎨 Creativity</div>
+          <div class="acid persistence">🔥 Persistence</div>
+          <div class="acid collaboration">🤝 Collaboration</div>
+        </div>
+        <div class="dna-strand-list">
+          <div class="dna-strand reveal-section">
+            <span class="left-acid logic">🧠 Logic</span>
+            <span class="right-acid creativity">🎨 Creativity</span>
+            <span class="result-text">Problem-solving instincts</span>
+          </div>
+          <div class="dna-strand reveal-section">
+            <span class="left-acid logic">🧠 Logic</span>
+            <span class="right-acid persistence">🔥 Persistence</span>
+            <span class="result-text">3AM debugging marathons</span>
+          </div>
+          <div class="dna-strand reveal-section">
+            <span class="left-acid logic">🧠 Logic</span>
+            <span class="right-acid collaboration">🤝 Collaboration</span>
+            <span class="result-text">Clean, documented APIs</span>
+          </div>
+          <div class="dna-strand reveal-section">
+            <span class="left-acid creativity">🎨 Creativity</span>
+            <span class="right-acid persistence">🔥 Persistence</span>
+            <span class="result-text">Spotting that one elusive CVE</span>
+          </div>
+          <div class="dna-strand reveal-section">
+            <span class="left-acid creativity">🎨 Creativity</span>
+            <span class="right-acid collaboration">🤝 Collaboration</span>
+            <span class="result-text">Thoughtful, influential PR comments</span>
+          </div>
+          <div class="dna-strand reveal-section">
+            <span class="left-acid persistence">🔥 Persistence</span>
+            <span class="right-acid collaboration">🤝 Collaboration</span>
+            <span class="result-text">Making legacy code lovable again</span>
+          </div>
+          <!-- Repeat for other combinations -->
+        </div>
+    </section>
+    <section class="mistakes reveal-section">
+      <h2>My Mistakes</h2>
+      <p>Any AI can have features, we humans have mistakes.</p>
+      <div class="mistake-graph">
+        <div class="mistake-card reveal-section collapsed" data-state="collapsed">
+          <div class="mistake-title">
+            🐛 Overconfident First Fix
+          </div>
+          <div class="mistake-teaser">
+            Fixed the issue... without having the issue.
+          </div>
+        
+          <div class="mistake-summary hidden">
+            <p>It was my first task of my career during a critical release week...</p>
+            <p>I fixed what I saw, wrote tests that passed, and pushed. But that added new issue.</p>
+          </div>
+        
+          <div class="mistake-full hidden">
+            <pre class="commit-block">
+commit a1c3d1d - fixed bug (not really)
+Author: Deep <newbie@freshgrad.dev>
+
+    Fixed the critical issue… on my machine.
+    Wrote unit tests that validated my code change.
+    Never reproduced the bug in real context.
+    Reviewed but skipped confirming with teammates(needful at that time).
+
+Lessons:
+  - Confidence is good — confirmation is better.
+  - Ask for help more often.
+  - Reproduce the bug before fixing it.
+            </pre>
+          </div>
+          <button class="toggle-btn">read more</button>
+        </div>
+        <div class="mistake-card reveal-section collapsed" data-state="collapsed">
+          <div class="mistake-title">
+            🖼️ Extension Error on Help Page
+          </div>
+          <div class="mistake-teaser">
+            Image was updated, but not as expected — a quiet rename caused a loud miss.
+          </div>
+        
+          <div class="mistake-summary hidden">
+            <p>During the final leg of a release, a help document image silently failed to load. I had updated it — but changed the file extension from <code>.jpg</code> to <code>.jpeg</code>.</p>
+            <p>The code was fine, the logic untouched, but my assumption went unchecked.</p>
+            <p>The image was broken — and it was caught by someone senior, making the moment heavier than it technically deserved.</p>
+          </div>
+        
+          <div class="mistake-full hidden">
+            <pre class="commit-block">
+commit e913ff2 - updated help logo
+Author: Deep <developer@almostshipped.dev>
+
+    Replaced image on help landing page.
+    But changed its extension from .jpg → .jpeg
+    Didn't verify in the actual rendered view.
+    Broken image spotted by release manager.
+
+Lessons:
+  - Even the smallest changes deserve real validation.
+  - Having many valid extensions isn't the same as following a standard.
+  - Reviewers miss things. Build systems that don't.
+  - Don't overweigh a bug just because a big name spotted it — the lesson stands on its own.
+            </pre>
+          </div>
+          <button class="toggle-btn">read more</button>
+        </div>
+        <div class="mistake-card reveal-section collapsed" data-state="collapsed">
+          <div class="mistake-title">
+            🤼 42 Review Comments, 0 Collaboration
+          </div>
+          <div class="mistake-teaser">
+            My code was working, but I wasn’t — with the team.
+          </div>
+        
+          <div class="mistake-summary hidden">
+            <p>I was excited to finally work with the team — but I showed up as a solo performer.</p>
+            <p>My code went for review and drew 42 comments. I defended every one with technical backing — but not a hint of team empathy.</p>
+            <p>I placed correctness above collaboration, and unknowingly, I created distance.</p>
+          </div>
+        
+          <div class="mistake-full hidden">
+            <pre class="commit-block">
+commit 7d2e4b9 - raised code, lowered trust
+Author: Deep <eccentric@earlydays.dev>
+
+    First cross-team review.
+    42 comments. 42 rebuttals.
+    Technically sound, socially tone-deaf.
+
+Lessons:
+  - Your code is not your identity.
+  - Feedback is a mirror, not a fight.
+  - In a team, you're building software and trust — both take design.
+  - Speak when it's needed. Listen when it's not.
+
+Reflection:
+  - Not everyone wants to be challenged every day.
+  - Great team players adjust tone, not just tools.
+  - That day, I won every argument and lost something more valuable — perspective.
+            </pre>
+          </div>
+          <button class="toggle-btn">read more</button>
+        </div>
+        <div class="mistake-card reveal-section collapsed" data-state="collapsed">
+          <div class="mistake-title">
+            🔐 Shared a Password by Email
+          </div>
+          <div class="mistake-teaser">
+            The sandbox was safe — but the habit wasn’t.
+          </div>
+        
+          <div class="mistake-summary hidden">
+            <p>I was sharing test credentials with a vendor, like I had the previous week.</p>
+            <p>But this time, the word “password” in my email triggered an automatic escalation — and within hours, I had a 10-step compliance form in my inbox from the VP.</p>
+            <p>No data leaked. No machine was breached. But the process flagged a pattern that needed to be stopped — and I was that pattern.</p>
+          </div>
+        
+          <div class="mistake-full hidden">
+            <pre class="commit-block">
+commit f4cc3s5 - emailed password in safe context
+Author: Deep <security.naive@teamlead.dev>
+
+    Gave credentials for security testing to external vendor.
+    Machines were sandboxed. Network was local.
+    Word "password" in email auto-triggered VP escalation.
+
+Lessons:
+  - Security policies exist for edge cases, not everyday ones.
+  - The habit, not the context, defines the risk.
+  - Escalations measure behavior risk, not just breach severity.
+  - “No harm done” doesn’t mean “no harm possible.”
+
+Reflection:
+  - It could’ve been anyone — but I owned the product.
+  - I calmly completed all 10 remediation steps for the team.
+  - Security is everyone’s job — especially when it feels optional.
+            </pre>
+          </div>
+          <button class="toggle-btn">read more</button>
+        </div>
+      </div>
+    </section>
+    <section class="tech reveal-section" id="tech">
+      <h2>Not "My" techstack</h2>
+      <div class="carousel">
+        <div class="carousel-track">
+          <div class="carousel-item active">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/python.svg"/>
+            </div>
+            <div class="carousel-item-title">Python</div>
+            <div class="carousel-punchline">Believe me, I am memory-aware.</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/react.svg"/>
+            </div>
+            <div class="carousel-item-title">React</div>
+            <div class="carousel-punchline">Haven't married to a framework yet</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/tensorflow.svg"/>
+            </div>
+            <div class="carousel-item-title">tensorflow</div>
+            <div class="carousel-punchline">Niether to a library</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/mysql.svg"/>
+            </div>
+            <div class="carousel-item-title">MySQL</div>
+            <div class="carousel-punchline">There was data in my project</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/swagger.svg"/>
+            </div>
+            <div class="carousel-item-title">Swagger</div>
+            <div class="carousel-punchline">Codegen before GenAI</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/git.svg"/>
+            </div>
+            <div class="carousel-item-title">Git</div>
+            <div class="carousel-punchline">Merge conflict races</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/jenkins.svg"/>
+            </div>
+            <div class="carousel-item-title">Jenkins</div>
+            <div class="carousel-punchline">Waking up with automation failure</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/lichess.svg"/>
+            </div>
+            <div class="carousel-item-title">lichess</div>
+            <div class="carousel-punchline">Yes, A game</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/jira.svg"/>
+            </div>
+            <div class="carousel-item-title">Jira</div>
+            <div class="carousel-punchline">Focus and Priortize but never judge</div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-icon">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/macos.svg"/>
+            </div>
+            <div class="carousel-item-title">macOS</div>
+            <div class="carousel-punchline">Because Linux gives too much freedom</div>
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn next" aria-label="Next">&#8594;</button>
+      </div>
+    </section>
+    <section class="cta-section reveal-section">
+      <h2>Still here?</h2>
+      <p>Let’s connect. Code, ideas, questions — all welcome, all human.</p>
+      
+      <div class="cta-actions">
+        <a href="mailto:deepjoshi11th@gmail.com" class="cta-button">Say Hello</a>
+        <a href="https://github.com/deepjoshi11th" class="cta-link" target="_blank">View GitHub</a>
+      </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2025 Deep Joshi. All rights reserved. Not really.</p>
+    </footer>
+</div>
