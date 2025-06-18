@@ -198,7 +198,8 @@ body, html {
   opacity: 1;
 }
 
-.mistakes {
+.mistakes, .tech {
+  position: relative;
   font-family: 'Segoe UI', sans-serif;
   background: rgba(0, 0, 0);
   color: #fff;
@@ -280,9 +281,79 @@ body, html {
   transition: all 0.4s ease;
 }
 
-.mistakes h2 {
+.mistakes h2,.tech h2 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #00ffe1;
+}
+
+
+.carousel {
+  text-align: center;
+  margin: 2em auto;
+  max-width: 350px;
+  position: relative;
+}
+.carousel-track {
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-item {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.carousel-item.active {
+  display: flex;
+  animation: fadeIn 0.4s;
+}
+.carousel-icon {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.carousel-icon > img {
+  width: 100px;
+  height: 100px;
+  transition: filter 0.3s;
+  filter:invert(86%) sepia(86%) saturate(1720%) hue-rotate(90deg) brightness(102%) contrast(102%);
+}
+.carousel-item-title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.carousel-punchline {
+  font-size: 0.95em;
+  color: #666;
+  margin-top: 0.5em;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00ffe1;
+  border: none;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+.carousel-btn:hover {
+  background: #00d5ff;
+}
+.carousel-btn.prev {
+  left: 0.5em;
+}
+.carousel-btn.next {
+  right: 0.5em;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95);}
+  to { opacity: 1; transform: scale(1);}
 }

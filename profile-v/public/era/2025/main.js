@@ -45,3 +45,36 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
     }
   });
 });
+
+
+const items = document.querySelectorAll('.carousel-item');
+let current = 0;
+function showItem(idx) {
+  items.forEach((item, i) => {
+    item.classList.toggle('active', i === idx);
+  });
+}
+document.querySelector('.carousel-btn.next').onclick = () => {
+  current = (current + 1) % items.length;
+  showItem(current);
+};
+document.querySelector('.carousel-btn.prev').onclick = () => {
+  current = (current - 1 + items.length) % items.length;
+  showItem(current);
+};
+let autoScrollInterval = setInterval(() => {
+  current = (current + 1) % items.length;
+  showItem(current);
+}, 4000);
+
+// Pause auto-scroll on mouse enter, resume on mouse leave
+const carousel = document.querySelector('.carousel');
+if (carousel) {
+  carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+  carousel.addEventListener('mouseleave', () => {
+    autoScrollInterval = setInterval(() => {
+      current = (current + 1) % items.length;
+      showItem(current);
+    }, 4000);
+  });
+}
