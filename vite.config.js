@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/profile/',
   server: {
     port: 3000,       // optional: change port if needed
     open: true        // auto-opens in default browser
