@@ -328,7 +328,7 @@ body, html {
 }
 .carousel-punchline {
   font-size: 0.95em;
-  color: #666;
+  color: #b0b0b0;
   margin-top: 0.5em;
 }
 .carousel-btn {
@@ -362,7 +362,7 @@ body, html {
 
 .cta-section p {
   font-size: 1.1rem;
-  color: #555;
+  color: #b0b0b0;
   max-width: 600px;
   margin: 0 auto 2rem;
 }
