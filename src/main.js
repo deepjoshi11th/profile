@@ -1,3 +1,4 @@
+import './style.css';
 import { renderEra } from './utils/animateEraChange.js';
 import { createTimeSlider } from './components/TimeSlider.js';
 
