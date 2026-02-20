@@ -1,0 +1,14 @@
+/* public/era/1995/styles.css */
+.era {
+    font-family: "Times New Roman", Times, serif;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    margin-top: 20px;
+}

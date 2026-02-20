@@ -1,0 +1,142 @@
+/* public/era/2005/styles.css */
+body {
+    background-color: #E8EEF7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    margin: 0;
+}
+
+#web2-container {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    -moz-border-radius: 8px;
+    /* Classic early border radius */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#web2-header {
+    background: #4A81D4;
+    /* Solid fallback */
+    background: -moz-linear-gradient(top, #7DACF0, #4A81D4);
+    background: linear-gradient(to bottom, #7DACF0, #4A81D4);
+    color: white;
+    padding: 15px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.web2-logo {
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.web2-beta {
+    font-size: 10px;
+    color: white;
+    background-color: #E24939;
+    padding: 2px 5px;
+    border-radius: 4px;
+    position: relative;
+    top: -15px;
+    left: 2px;
+}
+
+#web2-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#web2-nav li {
+    margin-left: 15px;
+}
+
+#web2-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#web2-nav a:hover {
+    text-decoration: underline;
+}
+
+#web2-body {
+    display: flex;
+    padding: 20px;
+}
+
+#web2-sidebar {
+    width: 200px;
+    padding-right: 20px;
+    border-right: 1px dotted #CCCCCC;
+}
+
+.web2-friends {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.friend-box {
+    width: 50px;
+    height: 50px;
+    background-color: #E8EEF7;
+    border: 1px solid #B0C4DE;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#web2-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #666666;
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.web2-button {
+    display: inline-block;
+    background: #E24939;
+    background: linear-gradient(to bottom, #F06A5C, #E24939);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 1px solid #C43D2F;
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.web2-button:active {
+    background: #C43D2F;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#web2-footer {
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #999999;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid #EEEEEE;
+}

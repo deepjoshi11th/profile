@@ -1,0 +1,43 @@
+/* public/era/2000/styles.css */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: "Comic Sans MS", "Arial Black", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.y2k-glow {
+    color: #00FF00;
+    text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 40px #00FF00;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.y2k-marquee {
+    color: #FFFF00;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #0000FF;
+    padding: 5px;
+    border: 2px solid #FFFF00;
+}
+
+.y2k-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF00FF;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px outset #FF00FF;
+    font-family: Arial, sans-serif;
+}
+
+.y2k-btn:active {
+    border: 3px inset #FF00FF;
+}
+
+h3 {
+    margin: 0 0 10px 0;
+}

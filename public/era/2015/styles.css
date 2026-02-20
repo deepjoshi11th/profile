@@ -1,0 +1,282 @@
+/* public/era/2015/styles.css */
+.material-era {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    min-height: 100vh;
+    padding-top: 64px;
+    /* Space for toolbar */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header & Toolbar */
+.md-header {
+    position: absolute;
+    /* Using absolute inside #app container rather than fixed to avoid affecting external elements */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3f51b5;
+    /* Indigo 500 */
+    color: white;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 4;
+}
+
+.md-toolbar {
+    height: 64px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.md-icon-button {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.md-icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.md-title {
+    margin: 0 0 0 24px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.md-spacer {
+    flex-grow: 1;
+}
+
+/* Drawer */
+.md-drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -256px;
+    width: 256px;
+    background-color: #fff;
+    box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
+    z-index: 6;
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.md-drawer.open {
+    transform: translateX(256px);
+}
+
+.md-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.md-scrim.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.md-drawer-header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 16px;
+    height: 140px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.md-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.md-drawer-title {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.md-drawer-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.md-nav-list {
+    padding: 8px 0;
+}
+
+.md-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 48px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.md-nav-item i {
+    color: rgba(0, 0, 0, 0.54);
+    margin-right: 32px;
+    font-size: 24px;
+}
+
+.md-nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.md-nav-item.active {
+    color: #3f51b5;
+    background-color: rgba(63, 81, 181, 0.12);
+}
+
+.md-nav-item.active i {
+    color: #3f51b5;
+}
+
+/* Main Content */
+.md-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Cards */
+.md-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.md-card-title {
+    padding: 16px;
+}
+
+.md-card-title h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.md-card-subtitle {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+}
+
+.md-card-text {
+    padding: 0 16px 16px 16px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 20px;
+}
+
+.md-card-actions {
+    padding: 8px;
+    display: flex;
+}
+
+/* Buttons */
+.md-button {
+    background: transparent;
+    border: none;
+    color: #3f51b5;
+    padding: 0 8px;
+    min-width: 64px;
+    height: 36px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.md-button:hover {
+    background-color: rgba(63, 81, 181, 0.08);
+}
+
+.md-button-primary {
+    color: #3f51b5;
+}
+
+/* FAB */
+.md-fab {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #ff4081;
+    /* Pink A200 */
+    color: white;
+    border: none;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    z-index: 3;
+}
+
+.md-fab:hover {
+    background-color: #f50057;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 600ms linear;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
