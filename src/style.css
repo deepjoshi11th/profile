@@ -94,3 +94,86 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* Ruler Slider Redesign */
+#slider-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.9);
+  padding-bottom: 2rem;
+  border-top: 2px solid #555;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ruler-container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  height: 60px;
+}
+
+.ruler-slider {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.ruler-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 12px;
+  border-radius: 4px;
+  background: #f7df1e;
+  cursor: pointer;
+  margin-top: 5px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.ruler-slider:focus {
+  outline: none;
+}
+
+.ruler-ticks {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ruler-tick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ruler-tick::before {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 15px;
+  background-color: #aaa;
+  margin-bottom: 5px;
+}
+
+.ruler-tick-label {
+  font-size: 0.8rem;
+  color: #ddd;
+  font-family: monospace;
+}

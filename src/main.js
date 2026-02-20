@@ -1,7 +1,12 @@
 import { renderEra } from './utils/animateEraChange.js';
 import { createTimeSlider } from './components/TimeSlider.js';
 
-document.body.appendChild(createTimeSlider());
+const sliderContainer = document.getElementById('slider-container');
+if (sliderContainer) {
+  sliderContainer.appendChild(createTimeSlider());
+} else {
+  document.body.appendChild(createTimeSlider());
+}
 
 renderEra("2025"); // default view
 
