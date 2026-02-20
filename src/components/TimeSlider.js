@@ -5,7 +5,6 @@ export function createTimeSlider() {
     slider.max = 2025;
     slider.step = 5;
     slider.value = 2025;
-    slider.disabled = true;
   
     slider.oninput = () => {
       const event = new CustomEvent("era-change", {

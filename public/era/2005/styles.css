@@ -1,0 +1,5 @@
+body, html { background: linear-gradient(#ecf4ff, #d8e8ff); }
+.web-era { max-width: 860px; margin: 2rem auto; padding: 1.25rem 1.4rem; border: 1px solid #9db8df; border-radius: 14px; background: #fff; font-family: Verdana, Arial, sans-serif; box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.era-2005 h1 { color: #2f5ea3; }
+.era-2005 p { padding: 0.55rem 0.75rem; border-radius: 10px; background: #f2f8ff; border: 1px solid #cfe0ff; }
+.badge-row span { display: inline-block; margin: 0.3rem; padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid #adc5eb; background: linear-gradient(#ffffff, #dbeafe); font-size: 0.82rem; }

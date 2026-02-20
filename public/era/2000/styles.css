@@ -1,0 +1,5 @@
+body, html { background: #d9d9d9; }
+.web-era { max-width: 840px; margin: 2rem auto; padding: 1rem 1.25rem; border: 3px ridge #777; background: #fff; font-family: Tahoma, Arial, sans-serif; }
+.era-2000 h1 { color: #003399; text-decoration: underline; }
+.era-2000 p { background: #ffffcc; padding: 0.5rem; border: 1px dashed #999; }
+.badge-row span { display: inline-block; margin: 0.25rem; padding: 0.3rem 0.6rem; border: 2px outset #bbb; background: #efefef; font-size: 0.85rem; }

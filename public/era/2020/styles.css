@@ -1,0 +1,6 @@
+body, html { background: #0f172a; }
+.web-era { max-width: 980px; margin: 2.3rem auto; padding: 1.5rem 1.7rem; border: 1px solid rgba(148,163,184,0.35); border-radius: 14px; background: rgba(15,23,42,0.86); color: #e2e8f0; font-family: Inter, 'Segoe UI', sans-serif; box-shadow: 0 14px 34px rgba(2,6,23,0.45); }
+.era-2020 h1 { color: #93c5fd; }
+.era-2020 p { padding: 0.7rem 0.9rem; background: rgba(30,41,59,0.9); border-radius: 10px; }
+.era-2020 ul { color: #cbd5e1; }
+.badge-row span { display: inline-block; margin: 0.28rem; padding: 0.35rem 0.75rem; background: rgba(56,189,248,0.16); color: #7dd3fc; border: 1px solid rgba(125,211,252,0.4); border-radius: 999px; font-size: 0.8rem; }

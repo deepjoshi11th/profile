@@ -29,14 +29,17 @@ export async function renderEra(year) {
       // Remove any previously added era scripts
       const existingEraScript = document.getElementById("era-script");
       if (existingEraScript) existingEraScript.remove();
-      
-      // Add the new JS script for the selected era
-      const script = document.createElement("script");
-      script.type = "module";
-      script.src = `${base}/era/${year}/main.js`;
-      script.id = "era-script";
-      script.async = true;
-      document.head.appendChild(script);
+
+      // Load era scripts only when needed (retro eras intentionally stay script-free)
+      const scriptYears = new Set(["2025"]);
+      if (scriptYears.has(String(year))) {
+        const script = document.createElement("script");
+        script.type = "module";
+        script.src = `${base}/era/${year}/main.js`;
+        script.id = "era-script";
+        script.async = true;
+        document.head.appendChild(script);
+      }
     } catch (err) {
       app.innerHTML = `<h2>Error loading year ${year}</h2><p>${err}</p>`;
     }
