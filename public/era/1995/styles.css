@@ -1,0 +1,78 @@
+.retro-page {
+  color: #000;
+  padding: 16px;
+  text-align: left;
+}
+
+.retro-shell {
+  max-width: 920px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 14px;
+}
+
+.retro-1995 {
+  background: #ffffe1;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.retro-1995 .retro-shell {
+  background: #fff;
+}
+
+.retro-page h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #003399;
+}
+
+.retro-page h2 {
+  font-size: 1.15rem;
+  margin: 16px 0 8px;
+  color: #111;
+}
+
+.retro-page .tagline {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.retro-page hr {
+  border: 0;
+  border-top: 1px dashed #333;
+}
+
+.retro-page a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.retro-nav,
+.retro-info {
+  background: #fff;
+  border-color: #666;
+  margin-top: 10px;
+}
+
+.retro-nav td {
+  text-align: center;
+}
+
+.retro-info th {
+  background: #3366cc;
+  color: #fff;
+}
+
+.code-block {
+  background: #f2f2f2;
+  border: 1px solid #888;
+  padding: 8px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.86rem;
+}
+
+.footer-note {
+  margin-top: 14px;
+  font-size: 0.82rem;
+}
