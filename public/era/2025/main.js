@@ -78,3 +78,14 @@ if (carousel) {
     }, 4000);
   });
 }
+
+const codexButton = document.querySelector('.codex-trigger');
+const codexStatus = document.getElementById('codex-status');
+if (codexButton && codexStatus) {
+  codexButton.addEventListener('click', () => {
+    const now = new Date();
+    codexStatus.textContent = `Status: checkpoint passed at ${now.toLocaleTimeString()}.`;
+    codexButton.textContent = 'Checkpoint Complete';
+    codexButton.disabled = true;
+  });
+}
