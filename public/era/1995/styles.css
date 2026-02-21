@@ -1,0 +1,193 @@
+/*
+ * 1995 — The year CSS was still a dream.
+ * But we're cheating a little for presentation.
+ * Authentic mid-90s Geocities / Angelfire aesthetic.
+ */
+
+body,
+html {
+    background: #000080 !important;
+    color: #000000 !important;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif !important;
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+#app {
+    max-width: 780px;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    text-align: left !important;
+    background: #C0C0C0;
+    border: 3px outset #DFDFDF;
+}
+
+/* Era container */
+.era-1995 {
+    background: #C0C0C0;
+}
+
+/* Marquee styling */
+.era-1995 marquee {
+    background: #FFFF00;
+    padding: 4px 0;
+    border: 2px inset #808080;
+    margin: 8px 0;
+}
+
+/* Retro horizontal rules */
+.era-1995 hr {
+    border: none;
+    height: 3px;
+}
+
+/* Navigation links */
+.era-1995 .nav-link {
+    color: #FFFF00 !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+.era-1995 .nav-link:hover {
+    color: #FF0000 !important;
+}
+
+/* Default links */
+.era-1995 a {
+    color: #0000FF !important;
+    text-decoration: underline !important;
+    font-weight: normal !important;
+}
+
+.era-1995 a:visited {
+    color: #800080 !important;
+}
+
+.era-1995 a:hover {
+    color: #FF0000 !important;
+}
+
+/* Table borders — authentic beveled look */
+.era-1995 table {
+    border-collapse: separate;
+}
+
+/* Headings */
+.era-1995 h2 {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    margin: 0.5em 0;
+    font-size: 1.4em;
+}
+
+.era-1995 h3 {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    margin: 0.5em 0;
+    font-size: 1.1em;
+}
+
+/* Code block for the JS example */
+.era-1995 .code-block {
+    background: #1a1a2e;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    padding: 12px;
+    border: 2px inset #333;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* Retro button */
+.era-1995 .retro-btn {
+    background: #C0C0C0 !important;
+    color: #000 !important;
+    border: 2px outset #DFDFDF !important;
+    padding: 4px 12px !important;
+    font-family: 'Arial', sans-serif !important;
+    font-size: 0.9em !important;
+    cursor: pointer;
+    border-radius: 0 !important;
+}
+
+.era-1995 .retro-btn:hover {
+    background: #D4D4D4 !important;
+    border-color: #DFDFDF !important;
+}
+
+.era-1995 .retro-btn:active {
+    border: 2px inset #808080 !important;
+}
+
+/* Blinking text effect (CSS-based since <blink> is deprecated) */
+.era-1995 .blink-text {
+    animation: blink95 1s step-end infinite;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@keyframes blink95 {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Input fields — retro style */
+.era-1995 input[type="text"] {
+    border: 2px inset #808080;
+    background: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+    padding: 2px 4px;
+}
+
+/* Visitor counter */
+.era-1995 #visitor-counter {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+}
+
+/* Lists */
+.era-1995 ul {
+    list-style-type: square;
+    padding-left: 2em;
+}
+
+.era-1995 li {
+    margin-bottom: 0.3em;
+    color: #000;
+}
+
+/* Font tags don't always work in modern browsers, ensure colors */
+.era-1995 font {
+    line-height: 1.5;
+}
+
+/* Sub/superscript for the binary joke */
+.era-1995 sub {
+    font-size: 0.65em;
+    color: #666;
+}
+
+/* Paragraph spacing */
+.era-1995 p {
+    margin: 0.4em 0;
+}
+
+/* Footer area */
+.era-1995 font[size="-1"] {
+    line-height: 1.8;
+}
+
+/* No modern styling remnants — scoped to #app only */
+#app .era-1995 * {
+    border-radius: 0;
+    text-shadow: none;
+    box-shadow: none;
+}

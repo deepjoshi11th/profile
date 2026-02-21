@@ -1,0 +1,107 @@
+/*
+ * 1990 — No CSS existed. 
+ * This file resets the parent site's modern styling
+ * to give the raw, unstyled HTML look of the era.
+ */
+
+body, html {
+    background: #c0c0c0 !important;
+    color: #000000 !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+#app {
+    max-width: 700px;
+    margin: 20px auto !important;
+    padding: 20px !important;
+    text-align: left !important;
+    background: #ffffff;
+    border: 2px inset #808080;
+}
+
+.era-1990 h1 {
+    font-size: 1.8em;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.era-1990 h2 {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 0.25em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.era-1990 h3 {
+    font-size: 1.1em;
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.era-1990 hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 1em 0;
+}
+
+.era-1990 a {
+    color: #0000EE !important;
+    text-decoration: underline !important;
+    font-weight: normal !important;
+}
+
+.era-1990 a:visited {
+    color: #551A8B !important;
+}
+
+.era-1990 ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+.era-1990 li {
+    margin-bottom: 0.5em;
+    color: #000;
+}
+
+.era-1990 pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    background: #f0f0f0;
+    border: 1px solid #999;
+    padding: 10px;
+    overflow-x: auto;
+    color: #000;
+    white-space: pre;
+}
+
+.era-1990 p {
+    color: #000;
+    margin: 0.5em 0;
+}
+
+.era-1990 address {
+    font-style: italic;
+    font-size: 0.85em;
+    color: #333;
+    border-top: 1px solid #999;
+    padding-top: 0.5em;
+    margin-top: 1em;
+}
+
+.era-1990 b {
+    color: #000;
+}
+
+.era-1990 i {
+    color: #333;
+}
+
+/* No animations. No transitions. No hover effects. This is 1990. */

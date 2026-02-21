@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -48,9 +49,11 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
@@ -74,9 +77,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -87,10 +92,262 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* =============================================
+   TIME RULER — Sticky bottom era selector
+   ============================================= */
+
+#time-ruler {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  height: 64px !important;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.92) 0%, rgba(0, 0, 0, 0.98) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.5) !important;
+  padding: 0 12px !important;
+  box-sizing: border-box !important;
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  overflow: visible !important;
+  text-align: left !important;
+  border-radius: 0 !important;
+}
+
+/* Reset all children inside ruler to prevent era CSS leaking in */
+#time-ruler * {
+  font-family: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+}
+
+/* --- Arrow buttons --- */
+.ruler-arrow {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 6px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  font-size: 14px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.ruler-arrow:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.ruler-arrow:active {
+  transform: scale(0.92);
+}
+
+/* --- Track --- */
+.ruler-track {
+  flex: 1;
+  position: relative;
+  height: 100%;
+  margin: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Base line */
+.ruler-track::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%);
+  border-radius: 1px;
+}
+
+/* --- Progress fill --- */
+.ruler-progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  /* defaults to full (2025 active) */
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 50%, #a78bfa 100%);
+  transform: translateY(-50%);
+  border-radius: 1px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+}
+
+/* --- Year marker buttons --- */
+.ruler-marker {
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none !important;
+  border: none !important;
+  padding: 8px 4px !important;
+  cursor: pointer;
+  z-index: 2;
+  outline: none !important;
+  transition: all 0.25s ease;
+}
+
+.ruler-marker:hover {
+  border: none !important;
+}
+
+.ruler-marker:focus-visible {
+  outline: 2px solid #a78bfa !important;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Tick mark */
+.ruler-tick {
+  display: block;
+  width: 2px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Year label */
+.ruler-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* --- Passed state (years before active) --- */
+.ruler-marker.passed .ruler-tick {
+  background: rgba(167, 139, 250, 0.5);
+}
+
+.ruler-marker.passed .ruler-label {
+  color: rgba(167, 139, 250, 0.6);
+}
+
+/* --- Hover --- */
+.ruler-marker:hover .ruler-tick {
+  height: 22px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ruler-marker:hover .ruler-label {
+  color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* --- Active marker --- */
+.ruler-marker.active .ruler-tick {
+  height: 24px;
+  width: 3px;
+  background: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.6), 0 0 20px rgba(167, 139, 250, 0.3);
+}
+
+.ruler-marker.active .ruler-label {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+/* Active dot indicator */
+.ruler-marker.active::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 8px rgba(167, 139, 250, 0.8);
+  animation: rulerPulse 2s ease-in-out infinite;
+}
+
+@keyframes rulerPulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.4);
+  }
+}
+
+/* --- Ensure page content doesn't hide behind ruler --- */
+body {
+  padding-bottom: 72px !important;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  #time-ruler {
+    height: 56px;
+    padding: 0 8px;
+  }
+
+  .ruler-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 12px !important;
+  }
+
+  .ruler-track {
+    margin: 0 8px;
+  }
+
+  .ruler-label {
+    font-size: 9px;
+  }
+
+  .ruler-marker.active .ruler-label {
+    font-size: 11px;
+  }
+
+  body {
+    padding-bottom: 64px !important;
   }
 }
