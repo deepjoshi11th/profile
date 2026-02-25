@@ -1,0 +1,13 @@
+/* glossy Web2.0 look */
+body {
+  background: linear-gradient(to bottom, #e0e0e0 0%, #ffffff 100%);
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+iframe {
+  border: 2px solid #ccc;
+}
+button {
+  border-radius: 12px;
+  background-color: #8ab4f8;
+}

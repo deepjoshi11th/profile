@@ -40,6 +40,7 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  padding-bottom: 80px; /* space for fixed slider ruler */
 }
 
 .logo {
@@ -93,4 +94,47 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* ruler-style time slider fixed to bottom */
+#time-slider-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #1a1a1aaa;
+  padding: 8px 0 16px; /* extra room for tick labels */
+  text-align: center;
+  z-index: 1000;
+}
+
+#time-slider-container input[type=range] {
+  width: 80%;
+}
+
+#time-slider-container .ticks {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  height: 20px;
+}
+#time-slider-container .tick {
+  position: absolute;
+  width: 1px;
+  height: 8px;
+  background: #fff;
+  top: 0;
+}
+#time-slider-container .tick-label {
+  position: absolute;
+  top: 8px;
+  font-size: 10px;
+  color: #fff;
+  transform: translateX(-50%);
+}
+
+#time-slider-container .year-label {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 0.9em;
 }
