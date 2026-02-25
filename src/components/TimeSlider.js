@@ -5,15 +5,27 @@ export function createTimeSlider() {
     slider.max = 2025;
     slider.step = 5;
     slider.value = 2025;
-    slider.disabled = true;
+    // make the control usable immediately
+    slider.disabled = false;
   
+    // container holds the slider and the label
+    const container = document.createElement('div');
+    container.style.textAlign = 'center';
+
+    const label = document.createElement('div');
+    label.textContent = `Year: ${slider.value}`;
+    label.style.marginTop = '4px';
+
     slider.oninput = () => {
+      label.textContent = `Year: ${slider.value}`;
       const event = new CustomEvent("era-change", {
         detail: { year: slider.value }
       });
       window.dispatchEvent(event);
     };
-  
-    return slider;
+
+    container.appendChild(slider);
+    container.appendChild(label);
+    return container;
   }
   

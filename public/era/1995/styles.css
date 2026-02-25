@@ -1,0 +1,16 @@
+/* early‑mid 90s aesthetic */
+body {
+  background-color: #ffffff;
+  color: #000080;
+  font-family: "Courier New", monospace;
+}
+h1 {
+  color: #0000ff;
+}
+button {
+  font-family: inherit;
+  padding: 4px 8px;
+  background-color: #c0c0c0;
+  border: 1px solid #000;
+  cursor: pointer;
+}

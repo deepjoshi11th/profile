@@ -1,0 +1,6 @@
+/* virtually no styling to mimic early HTML-only pages */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", serif;
+}
